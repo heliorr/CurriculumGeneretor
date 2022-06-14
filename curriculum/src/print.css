@@ -1,0 +1,12 @@
+@media print {
+    .header {
+      visibility: hidden;
+      position:absolute;
+    }
+    .footer {
+        visibility: hidden;
+    }
+    .curriculum {
+        position: fixed;
+    }
+  }
