@@ -10,60 +10,70 @@ class Curriculum extends React.Component {
             <>
                 <Header />
                 <div className="curriculum">
-                    <h2>{ data.name }</h2>
-                    <img src={ data.image } alt={ data.name } />
-                    <p>Idade: { data.idade }</p>
-                    <p>Sobre: { data.sobre }</p>
-                    <h3>Contato</h3>
-                    <p>Email: { data.email }</p>
-                    <p>Telefone: { data.telefone }</p>
-                    <h3>Endereço</h3>
-                    <p>Cidade: { data.cidade }</p>
-                    <p>Bairro: { data.bairro }</p>
-                    <p>Rua: { data.rua }</p>
-                    <p>Numero: {data.number }</p>
-                    <h3>Formação</h3>
-                    {
+                    <div className="headerCurriculum">
+                        <img src={ data.image } alt={ data.name } />
+                        <div>
+                            <h2>{ data.name }</h2>
+                            <p>Idade: { data.idade }</p>
+                            <p>Sobre: { data.sobre }</p>
+                        </div>
+                    </div>
+                    <div className="formarcao">
+                        <h3>Formação</h3>
+                        {
                         data.formacao.map((element, index) => (
-                            <div key={ index }>
+                            <ul key={ index }>
                                 <p>{index+1}° Formação</p>
-                                <p>{ element.instituto }</p>
-                                <p>{ element.curso }</p>
-                                <p>{ element.ano }</p>
-                            </div>
+                                <li>{ element.instituto }</li>
+                                <li>{ element.curso }</li>
+                                <li>{ element.ano }</li>
+                            </ul>
                         ))
                     }
-                    <div>
-                        <h3>Referencia</h3>
+                    </div>
+                    <div className="referencias">
+                    <h3>Referencia</h3>
                         {
                             data.referencias.map((element, index) => (
-                                <div key={ index }>
-                                    <p>{ element.empresa }</p>
-                                    <p>{ element.periodo }</p>
-                                    <p>{ element.referencia }</p>
-                                </div>
+                                <ul key={ index }>
+                                    <li>{ element.empresa }</li>
+                                    <li>{ element.periodo }</li>
+                                    <li>{ element.referencia }</li>
+                                </ul>
                             ))
                         }
                     </div>
-                    <div>
-                        <h3>Habilidades</h3>
+                    <div className="habilidade">
+                    <h3>Habilidades</h3>
+                    <ul>
                         {
                             data.skills.map((element, index) => (
-                                <div key={ index }>
-                                    <p>{ element }</p>
-                                </div>
+                                <li key={ index }>{ element }</li>
                             ))
                         }
+                    </ul>
                     </div>
-                    <h3>Redes Profisionais</h3>
-                    {
-                        data.linkedin && <a href={ data.linkedin }>Linkedin</a>
-                    }
-                    <br/>
-                    {
-                        data.github && <a href={ data.github }>Github</a>
-                    }
-                   
+                    <div className="endereco">
+                        <div className="info">
+                            <h3>Endereço</h3>
+                            <p>Cidade: { data.cidade }</p>
+                            <p>Bairro: { data.bairro }</p>
+                            <p>Rua: { data.rua }</p>
+                            <p>Numero: {data.number }</p>
+                        </div>
+                        <div className="contatos">
+                            <h3>Contato</h3>
+                            <p>Email: { data.email }</p>
+                            <p>Telefone: { data.telefone }</p>
+                            {
+                                data.linkedin && <a href={ data.linkedin }>{ data.linkedin }</a>
+                            }
+                            <br/>
+                            {
+                                data.github && <a href={ data.github }>{ data.github }</a>
+                            }
+                        </div>
+                    </div>
                 </div>
                 <Footer />
             </>

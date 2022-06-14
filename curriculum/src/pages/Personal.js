@@ -151,9 +151,9 @@ class Personal extends React.Component {
                       type="number"
                     />
                 </form>
-                <button onClick={ this.submitRedux }>Salvar Dados</button>
+                <button class="btn btn-primary" onClick={ this.submitRedux }>Salvar Dados</button>
                 </div>
-                <div>
+                <div className="preview">
                     <h2>{ name }</h2>
                     <img src={ image } alt={ name } />
                     <p>Idade: { idade }</p>

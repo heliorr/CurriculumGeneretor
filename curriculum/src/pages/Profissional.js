@@ -139,13 +139,13 @@ class Profissional extends React.Component {
                 <button onClick={ this.submitRedux }>Salvar Dados</button>
                 </div>
                 <div>
-                <div>
+                <div className="preview">
                     <h3>Dados Profissionais</h3>
                     <h3>Formação</h3>
                     <div className="curriculumLayout">
                     {
                         formacao.map((element, index) => (
-                            <div key={ index }>
+                            <div key={ index } className="preview">
                                 <p>{ element.instituto }</p>
                                 <p>{ element.curso }</p>
                                 <p>{ element.ano }</p>
@@ -157,7 +157,7 @@ class Profissional extends React.Component {
                     <div className="curriculumLayout">
                     {
                         referencias.map((element, index) => (
-                            <div key={ index }>
+                            <div key={ index } className="preview">
                                 <p>{ element.empresa }</p>
                                 <p>{ element.periodo }</p>
                                 <p>{ element.referencia }</p>
@@ -169,7 +169,7 @@ class Profissional extends React.Component {
                     <div className="">
                     {
                         skills.map((element, index) => (
-                            <div key={ index }>
+                            <div key={ index } className="preview">
                                 <p>{ element }</p>
                             </div>
                         ))

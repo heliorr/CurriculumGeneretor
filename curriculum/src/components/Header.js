@@ -6,8 +6,8 @@ class Header extends React.Component {
         return (
             <div className="header">
             <h1>Formatador de Curriculo</h1>
-           <div> <Link to="./"> Home </ Link> </div>
-          <div>  <Link to="/personal"> Personal </ Link> </div>
+            <div> <Link to="./"> Home </ Link> </div>
+            <div> <Link to="/personal"> Personal </ Link> </div>
             <div><Link to="/profissional"> Professional </ Link></div>
             <div><Link to="/curriculum"> Curriculum </ Link></div>
             </ div>
